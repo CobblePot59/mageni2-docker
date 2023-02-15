@@ -14,7 +14,7 @@ docker compose up -d --build
 ```
 3) Don't forget to get your credentials in the terminal.
 
-**Remarque : ** Don't worry if you get a 500 error in the knowledge base, it's temporary, it's time for it to update.
+__Remarque :__ Don't worry if you get a 500 error in the knowledge base, it's temporary, it's time for it to update.
 
 ## Preview
 ![alt text](https://raw.githubusercontent.com/CobblePot59/mageni2-docker/main/mageni2.png)
