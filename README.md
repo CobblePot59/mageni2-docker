@@ -8,10 +8,11 @@ It indicates potential or proven weaknesses on the machines tested. This include
 ```
 git clone https://github.com/CobblePot59/mageni2-docker.git
 ```
-3) Launch docker-compose to start the app.
+2) Launch docker-compose to start the app.
 ```
 docker compose up -d --build
 ```
+3) Don't forget to get your credentials in the terminal.
 
 ## Preview
 ![alt text](https://raw.githubusercontent.com/CobblePot59/mageni2-docker/main/mageni2.png)
