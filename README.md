@@ -17,4 +17,4 @@ docker compose up -d --build
 __Remarque :__ Don't worry if you get a 500 error in the knowledge base, it's temporary, it's time for it to update.
 
 ## Preview
-![alt text](https://raw.githubusercontent.com/CobblePot59/mageni2-docker/main/mageni2.png)
+![alt text](https://raw.githubusercontent.com/CobblePot59/mageni2-docker/main/pictures/mageni2.png)
