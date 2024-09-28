@@ -1,11 +1,14 @@
-version: '3'
 services:
   app:
-    build: BUILD
+    build:
+      context: BUILD
+      args:
+        MAGENI_USERNAME: "admin"
+        MAGENI_EMAIL: "admin@mageni.int"
+        MAGENI_PASSWORD: "Password1"
     image: mageni
+    hostname: mageni
     container_name: mageni
     restart: always
-    stdin_open: true
-    tty: true     
     ports:
       - 8443:443

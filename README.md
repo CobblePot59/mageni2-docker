@@ -8,13 +8,17 @@ It indicates potential or proven weaknesses on the machines tested. This include
 ```
 git clone https://github.com/CobblePot59/mageni2-docker.git
 ```
-2) Launch docker-compose to start the app.
+2) Modify docker-compose.yml arguments.
+```
+args:
+  MAGENI_USERNAME: "admin"
+  MAGENI_EMAIL: "admin@mageni.int"
+  MAGENI_PASSWORD: "Password1"
+```
+3) Launch docker-compose to start the app.
 ```
 docker compose up -d --build
 ```
-3) Don't forget to get your credentials in the terminal.
-
-__Remarque :__ Don't worry if you get a 500 error in the knowledge base, it's temporary, it's time for it to update.
 
 ## Preview
 ![alt text](https://raw.githubusercontent.com/CobblePot59/mageni2-docker/main/pictures/mageni2.png)

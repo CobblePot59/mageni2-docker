@@ -26,7 +26,8 @@ logfile="$dirhome/mageni-install.log"
 feedlog="$dirhome/mageni-feed-update.log"
 
 cronduser="mageni"
-user_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 ; echo '')
+# user_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 ; echo '')
+user_pass=MAGENI_PASSWORD
 
 APTUPDATERUN=0
 
@@ -704,9 +705,11 @@ function mageni_install()
     fi
 
     msg_normal "Creating user administrator"
-    
-    user_name=$(curl -s -X GET "$api_endpoint/user" -H 'Content-Type: application/json' -H "Authorization: Bearer ieaJXpA3EC37aZug27g0WQ8Ktz0jE7K8lOBkilGE" | jq -r '.name')
-    user_email=$(curl -s -X GET "$api_endpoint/user" -H 'Content-Type: application/json' -H "Authorization: Bearer ieaJXpA3EC37aZug27g0WQ8Ktz0jE7K8lOBkilGE" | jq -r '.email')
+
+    # user_name=$(curl -s -X GET "$api_endpoint/user" -H 'Content-Type: application/json' -H "Authorization: Bearer ieaJXpA3EC37aZug27g0WQ8Ktz0jE7K8lOBkilGE" | jq -r '.name')
+    # user_email=$(curl -s -X GET "$api_endpoint/user" -H 'Content-Type: application/json' -H "Authorization: Bearer ieaJXpA3EC37aZug27g0WQ8Ktz0jE7K8lOBkilGE" | jq -r '.email')
+    user_name=MAGENI_USERNAME
+    user_email=MAGENI_EMAIL
 
     if cd $frontend_seeders; then
       sed -i -e "s/ReplaceUser/$user_name/g" UserSeeder.php >/dev/null 2>/dev/null
